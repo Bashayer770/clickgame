@@ -7,7 +7,6 @@ import { useState } from "react";
 function App() {
   const [Num, setNum] = useState(0);
   const [coin, setCoin] = useState(Num);
-  const [show, setShow] = useState(false);
 
   function building() {
     setCoin(coin - 3);
@@ -26,7 +25,7 @@ function App() {
   return (
     <div>
       <Header />
-      <h4>{coin}</h4>
+      <h4>{coin} coins</h4>
       <h3>{Num}</h3>
 
       <h6>destroy planets</h6>
