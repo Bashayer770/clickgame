@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./components/Header";
+import { Clickpage } from "./components/Clickpage";
+import { useState } from "react";
 
 function App() {
+  const [Num, setNum] = useState(0);
+  const [coin, setCoin] = useState(0);
+  function clicked() {
+    setNum(Num + 1);
+  }
+
+  function addCoin() {
+    setCoin(coin + 1);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {coin}
+      {Num}
+
+      <h6>destroy planets</h6>
+      <button onClick={clicked}>Destroy planet</button>
     </div>
   );
 }
