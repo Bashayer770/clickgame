@@ -38,6 +38,86 @@
 }
 
 .buttonDestroy {
-  background-color: red;
+  background-color: rgb(3, 2, 2);
+  width: 170px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-;
+  font-size: large;
+  color: white;
+  height: 30px;
   border-radius: 5pt;
+  margin-bottom: 80px;
+}
+
+.building {
+  background-color: rgb(3, 2, 2);
+  width: 170px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-;
+  font-size: large;
+  color: white;
+  height: 30px;
+  border-radius: 5pt;
+  margin-bottom: 14px;
+}
+.upgrade {
+  background-color: rgb(3, 2, 2);
+  width: 170px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-;
+  font-size: large;
+  color: white;
+  height: 30px;
+  border-radius: 5pt;
+}
+
+@keyframes morph {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: yellow;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+/* (A2) COSMETICS */
+body {
+  width: 100%;
+  height: 100px;
+  background-color: #eee;
+}
+
+/* (A3) BACKGROUND COLOR ANIMATION WITH KEYFRAMES */
+body {
+  animation: morph 0.1s infinite;
+}
+
+.rotateme {
+  animation: rotate 0.1s infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0.5, 1);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(90deg);
+  }
+  60% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.swap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

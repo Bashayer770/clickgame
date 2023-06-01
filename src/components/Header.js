@@ -5,7 +5,7 @@ import image from "../assets/images/click.jpeg";
 const Header = () => {
   return (
     <div>
-      <img src={image} width={100} height={100} />
+      {/* <img src={image} width={100} height={100} /> */}
       <h2>THE DEATH STAR</h2>
     </div>
   );
