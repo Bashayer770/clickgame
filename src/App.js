@@ -7,6 +7,7 @@ import boop from "./Sounds/boop.mp3";
 import funtown from "./Sounds/funtown.mp3";
 import collecting from "./Sounds/collecting.mp3";
 import achievement from "./Sounds/achievement.mp3";
+import coi from "./assets/images/coi.svg";
 
 function App() {
   const [Num, setNum] = useState(1);
@@ -15,9 +16,12 @@ function App() {
   const [theupgrade, setTheupgrade] = useState(false);
 
   function building() {
-    setCoin(coin - 3);
+    if (coin >= 2) {
+      setCoin(coin - 3);
+    } else {
+      alert("You don't have enough coins!");
+    }
   }
-
   function clicked() {
     new Audio(boop).play();
     setNum(Num + 1);
@@ -29,9 +33,13 @@ function App() {
     setClicks(clicks + 2);
   }
   function upgrade() {
-    new Audio(achievement).play();
-    setCoin(coin - 3);
-    setNum(Num + 2);
+    if (coin >= 3) {
+      new Audio(achievement).play();
+      setCoin(coin - 3);
+      setNum(Num + 2);
+    } else {
+      alert("You don't have enough coins!");
+    }
   }
 
   //function play(){
@@ -42,6 +50,7 @@ function App() {
     <div id="demo" className="swap">
       <Header />
       <h4>{coin} coins</h4>
+      {/* <svg scr={coi} /> */}
       <h3 className="score">{Num}</h3>
 
       <h6>{Num} destroyed planets</h6>
