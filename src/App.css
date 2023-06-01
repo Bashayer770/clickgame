@@ -70,16 +70,16 @@
 
 @keyframes morph {
   0% {
-    background-color: red;
+    background-color: rgb(249, 133, 133);
   }
   50% {
-    background-color: yellow;
+    background-color: rgb(255, 255, 112);
   }
   75% {
-    background-color: green;
+    background-color: rgb(171, 253, 171);
   }
   100% {
-    background-color: blue;
+    background-color: rgb(170, 204, 255);
   }
 }
 
